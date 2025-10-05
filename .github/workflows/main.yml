@@ -15,6 +15,18 @@ jobs:
     # The type of machine to run the job on
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      # Step 2 (Recommended): Set up the Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Specify your Node.js version
+
+      # Step 3: Now npm install will find package.json
+      - name: Run npm install
+        run: npm install
       # Step 1: Check out the code from your repository
       - name: 23f3003694@ds.study.iitm.ac.in
         run: echo "Hello, world!"
