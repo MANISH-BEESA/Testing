@@ -10,9 +10,11 @@ on:
   workflow_dispatch:
 
 # A workflow is made of one or more jobs
-
 jobs:
-  test:
+  test_job:
+    # The type of machine to run the job on
+    runs-on: ubuntu-latest
     steps:
+      # Step 1: Check out the code from your repository
       - name: 23f3003694@ds.study.iitm.ac.in
         run: echo "Hello, world!"
